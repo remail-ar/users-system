@@ -1,0 +1,18 @@
+{
+    "configurations": [
+
+    {
+        "name": "Server",
+        "type": "go",
+        "request": "launch",
+        "mode": "debug",
+        "program": "${workspaceFolder}/cmd/main.go",
+        "env": {
+            "POSTGRES_USER": "postgres",
+            "POSTGRES_PASSWORD": "password",
+            "POSTGRES_ENDPOINT": "localhost",
+            "POSTGRES_PORT":"5432",
+            "POSTGRES_DB": "users-service"
+        }
+    }]
+}
