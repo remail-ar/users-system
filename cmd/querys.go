@@ -9,8 +9,7 @@ import (
 )
 
 func SelectQuery(dbpool *pgxpool.Pool) (string, error) {
-	var id string
-	var email string
+	var id, email string
 	err := dbpool.QueryRow(context.Background(), "select id, primaryemail from USERS").Scan(&id, &email)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)

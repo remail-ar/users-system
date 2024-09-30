@@ -8,11 +8,11 @@
         "mode": "debug",
         "program": "${workspaceFolder}/cmd/",
         "env": {
-            "POSTGRES_USER": "postgres",
-            "POSTGRES_PASSWORD": "password",
-            "POSTGRES_ENDPOINT": "localhost",
-            "POSTGRES_PORT":"5432",
-            "POSTGRES_DB": "users_system"
+            "DB_USER": "postgres",
+            "DB_PASSWORD": "password",
+            "DB_HOST": "127.0.0.1",
+            "DB_PORT":"5432",
+            "DB_NAME": "users"
         }
     }]
 }
