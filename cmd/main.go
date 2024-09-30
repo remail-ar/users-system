@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/remail-ar/users-service/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -52,5 +53,16 @@ func main() {
 	if err != nil {
 		log.Fatalf("Query failed: %v", err)
 	}
+
+	var user models.User := models.User{
+		Name: "Alejandro",
+		Age: 36,
+		Birthday: time.Now()
+	}
+	result := db.Create(&user) // pass pointer of data to Create
+
+	user.ID             // returns inserted data's primary key
+	result.Error        // returns error
+	result.RowsAffected // returns inserted records count
 
 }

@@ -1,4 +1,4 @@
-module users-service
+module github.com/remail-ar/users-service
 
 go 1.21
 
